@@ -18,3 +18,20 @@ contract HelloWorld {
 
     fallback() external {}
 }
+
+contract Sum {
+    uint256 a;
+    uint256 b;
+
+    function setFirstValue(uint256 _a) public {
+        a = _a;
+    }
+
+    function setSecondValue(uint256 _b) public {
+        b = _b;
+    }
+
+    function getResult() public view returns (uint256) {
+        return a + b;
+    }
+}
